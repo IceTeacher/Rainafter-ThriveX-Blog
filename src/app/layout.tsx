@@ -48,7 +48,7 @@ export default async function RootLayout({ children }: Readonly<{ children: Reac
             var _hmt = _hmt || [];
             (function() {
               var hm = document.createElement("script");
-              hm.src = "https://hm.baidu.com/hm.js?e5bf799a3e49312141c8b677b7bec1c2";
+              hm.src = "https://hm.baidu.com/hm.js?940ffd5668a8699e298c6596c9a35930";
               var s = document.getElementsByTagName("script")[0]; 
               s.parentNode.insertBefore(hm, s);
             })();
