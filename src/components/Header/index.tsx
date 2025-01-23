@@ -166,13 +166,13 @@ const Header = () => {
                     </ul>
 
                     {/* 主题切换开关 */}
-                    <Switch
+                    {/* <Switch
                         size="lg"
                         isSelected={isDark}
                         onValueChange={toTheme}
                         thumbIcon={({ isSelected }) => isSelected ? <BsFillMoonStarsFill className="text-gray-500" /> : <FaRegSun className="text-gray-500" />}
                         className={`absolute top-0 right-7 h-full ${isDark ? '[&>.bg-default-200]:!bg-[#4e5969]' : '[&>.bg-default-200]:!bg-[#e1e1e1]'}`}
-                    />
+                    /> */}
                 </div>
             </div >
 
