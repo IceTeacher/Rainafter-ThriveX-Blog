@@ -22,13 +22,18 @@ export default async () => {
             在项目 Star 突破 2K 后大家可自由选择删除 or 保留版权
             如果你是项目贡献者 或 项目赞助者，那么你可以自由选择删除 or 保留版权
         */}
-        <div className='py-4 border-t dark:border-black-a transition-colors'>
-          <Tooltip showArrow={true} content="一款免费、开源、年轻、高颜值的现代化博客管理系统">
-            <div className='flex justify-center items-center space-x-3'>
-              <img src="https://bu.dusays.com/2024/11/17/6739adf188f64.png" width={30} height={30} alt='系统LOGO' />
-              <Link href="https://github.com/LiuYuYang01/ThriveX-Blog" target='_blank' className='hover:text-primary transition-colors'> 基于开源项目 ThriveX 构建</Link>
+        <div className='py-4 border-t dark:border-black-a transition-colors px-8 md:px-16'>
+          <div className='flex flex-col md:flex-row md:justify-between items-center space-y-3 md:space-y-0'>
+            <Tooltip showArrow={true} content="一款免费、开源、年轻、高颜值的现代化博客管理系统">
+              <div className='flex items-center space-x-3'>
+                <img src="https://bu.dusays.com/2024/11/17/6739adf188f64.png" width={18} height={18} alt='系统LOGO' />
+                <Link href="https://github.com/LiuYuYang01/ThriveX-Blog" target='_blank' className='hover:text-primary transition-colors'>基于开源项目 ThriveX 构建</Link>
+              </div>
+            </Tooltip>
+            <div className='flex items-center space-x-3'>
+              <Link href="https://beian.miit.gov.cn/" target='_blank' className='hover:text-primary transition-colors'>豫ICP备19036546号</Link>
             </div>
-          </Tooltip>
+          </div>
         </div>
       </div>
     </>
