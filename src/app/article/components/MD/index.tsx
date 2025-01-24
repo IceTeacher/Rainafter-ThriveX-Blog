@@ -21,6 +21,7 @@ import 'rehype-callouts/theme/obsidian';
 import rehypeRaw from 'rehype-raw';
 import Skeleton from "@/components/Skeleton";
 import { BiCopy } from "react-icons/bi";
+
 import "./index.scss";
 
 interface Props {
@@ -159,18 +160,30 @@ const ContentMD = ({ data }: Props) => {
                         return '';
                     }).join('').trim();
                 };
+
                 return getTextFromChildren(children);
             }, [children]);
+
+            const lineNumbers = useMemo(() => {
+                return text.split('\n').map((_, index) => index + 1);
+            }, [text]);
 
             return (
                 <>
                     {(!inline && match) && (
                         <CopyToClipboard text={text} onCopy={() => toast.success('代码已复制')}>
-                            <button className="absolute top-3 right-3 bg-gray-300 text-gray-700 rounded p-1.5 lg:opacity-0 hover:opacity-100 transition-opacity">
+                            <button className="absolute top-3 right-3 bg-gray-300 text-gray-700 rounded p-1.5 lg:opacity-0 transition-opacity">
                                 <BiCopy />
                             </button>
                         </CopyToClipboard>
                     )}
+
+                    <ul className="lineNumber hidden">
+                        {lineNumbers.map((lineNumber) => (
+                            <li key={lineNumber} className="text-[#bfbfbf] !m-0 list-none">{lineNumber}</li>
+                        ))}
+                    </ul>
+
                     <code className={className} {...props}>
                         {children}
                     </code>
