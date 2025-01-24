@@ -14,14 +14,14 @@ import InfoTwo from './component/InfoTwo'
 export default () => {
   const data: MyData = {
     info: {
-      name: "Liu YuYang",
-      avatar: 'https://q.qlogo.cn/g?b=qq&nk=3311118881&s=640',
+      name: "IceTeacher",
+      avatar: 'https://image.rainafter.cn/i/2025/01/23/6791e44975057.jpg',
       profession: "一名Web全栈开发工程师",
       introduction: "我从小就对计算机编程技术有着无穷的兴趣，所以我的梦想是做一名技术顶尖的 架构师，因此我一直在朝着这个方向去努力、去坚持 直到梦想成真！",
     },
     infoTwo: {
-      author: '宇阳',
-      avatar_url: 'https://q.qlogo.cn/g?b=qq&nk=3311118881&s=640',
+      author: 'IceTeacher',
+      avatar_url: 'https://image.rainafter.cn/i/2025/01/23/6791e44975057.jpg',
       left_tags: [
         '🤖️ 数码科技爱好者',
         '🔍 分享与热心帮助',
@@ -89,6 +89,28 @@ export default () => {
       }
     ],
     project: [
+      {
+        name: "ThriveX",
+        images: [
+          "https://bu.dusays.com/2024/09/17/66e9704b2b809.png",
+          "https://bu.dusays.com/2024/09/17/66e97036dddcb.png",
+          "https://bu.dusays.com/2024/09/17/66e97035726ae.png",
+          "https://bu.dusays.com/2024/09/17/66e97031cd456.png"
+        ],
+        description: "🎉 ThriveX 相比旧版 Thrive 的核心改变是从 Vue 全面迁移到了 React 技术栈并采用了 Nextjs 服务端渲染技术进行全方面重构，对SEO方面有了显著的提高。并且还新增了很多额外的功能...",
+        front: {
+          technology: "NextJS、TypeScript、Zustand、TailwindCSS、Scss、Echarts",
+          url: "https://github.com/LiuYuYang01/ThriveX-Blog"
+        },
+        control: {
+          technology: "React、Antd、TypeScript、Zustand、TailwindCSS、Echarts",
+          url: "https://github.com/LiuYuYang01/ThriveX-Admin"
+        },
+        backend: {
+          technology: "Spring Boot、Mybatis Plus、MySQL、Redis、Qiniu、Socket.io、Swagger",
+          url: "https://github.com/LiuYuYang01/ThriveX-Server"
+        },
+      },
       /* {
         name: "ThriveX",
         images: [
@@ -183,9 +205,9 @@ export default () => {
           <Technology />
         </div>
 
-        <div className="mt-52">
+        {/*<div className="mt-52">
           <Project data={data?.project} />
-        </div>
+        </div>*/}
 
         {/* <div className="mt-52">
           <CurriculumVitae />

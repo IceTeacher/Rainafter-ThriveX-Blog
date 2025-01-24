@@ -33,7 +33,7 @@ export default async ({ params, searchParams }: Props) => {
           </div>
         </Swiper>
 
-        <div className="flex flex-col flex-grow justify-between md:w-full lg:w-[900px] lg:mx-auto px-4 lg:p-0 mt-5 mb-[75px]">
+        <div className="flex flex-col flex-grow justify-between md:w-full lg:w-[900px] lg:mx-auto px-4 lg:p-0 my-5 md:mb-[75px]">
           <Classics data={data} />
 
           {/* 当数据量为0时，不显示分页组件 */}

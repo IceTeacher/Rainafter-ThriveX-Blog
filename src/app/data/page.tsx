@@ -32,7 +32,7 @@ export default () => {
                 </div>
             </Swiper>
 
-            <div className="w-[90%] xl:w-[1200px] my-10 mx-auto bg-white dark:bg-black-b p-6 sm:p-10 rounded-xl border dark:border-black-b transition-colors">
+            <div className="w-[90%] xl:w-[1200px] my-10 md:mb-[95px] mx-auto bg-white dark:bg-black-b p-6 sm:p-10 rounded-xl border dark:border-black-b transition-colors">
                 <Statis aTotal={articleList.length} />
                 <Archiving list={articleList} />
             </div>
