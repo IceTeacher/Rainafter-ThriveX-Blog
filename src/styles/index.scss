@@ -3,6 +3,9 @@
 body {
     background-color: #f9f9f9;
     font-weight: normal;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 
     // 霞鹜文楷
     font-family: "LXGW WenKai";

@@ -22,7 +22,7 @@ export default async ({ params, searchParams }: Props) => {
       <title>{`${name} - 分类`}</title>
       <meta name="description" content={name} />
 
-      <div>
+      <div className="flex flex-col flex-grow">
         <Swiper isRipple={false}>
           {/* 星空背景组件 */}
           <Starry />
@@ -33,10 +33,11 @@ export default async ({ params, searchParams }: Props) => {
           </div>
         </Swiper>
 
-        <div className="md:w-full lg:w-[900px] lg:mx-auto px-4 lg:p-0 my-5">
+        <div className="flex flex-col flex-grow justify-between md:w-full lg:w-[900px] lg:mx-auto px-4 lg:p-0 my-5">
           <Classics data={data} />
 
-          <Pagination total={data?.pages} page={page} path={`?name=${name}`} className="flex justify-center mt-5" />
+          {/* 当数据量为0时，不显示分页组件 */}
+          {data.total !== 0 && <Pagination total={data?.pages} page={page} path={`?name=${name}`} className="flex justify-center mt-5" /> } 
         </div>
       </div>
     </>

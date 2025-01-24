@@ -24,7 +24,7 @@ export default async ({ searchParams }: Props) => {
 
   return (
     <>
-      <div className="bg-[linear-gradient(to_right,#fff1eb_0%,#d0edfb_100%)] dark:bg-[linear-gradient(to_right,#232931_0%,#232931_100%)]">
+      <div className="flex flex-col flex-grow justify-between bg-[linear-gradient(to_right,#fff1eb_0%,#d0edfb_100%)] dark:bg-[linear-gradient(to_right,#232931_0%,#232931_100%)]">
         <div className="w-full lg:w-[800px] px-6 lg:px-0 mx-auto pt-24 pb-10">
           <div className="flex items-center flex-col p-4 mb-10 border dark:border-black-b rounded-lg bg-white dark:bg-black-b bg-[url('https://bu.dusays.com/2024/11/27/6746e3ec88c4f.jpg')] bg-no-repeat bg-center bg-cover transition-colors">
             <img src={user.avatar} alt="作者头像" width={80} height={80} className="rounded-full avatar-animation shadow-[5px_11px_30px_20px_rgba(255,255,255,0.3)]" />
@@ -66,9 +66,14 @@ export default async ({ searchParams }: Props) => {
 
             <Show is={!record?.result?.length} children={<Empty info='闪念列表为空~' />} />
           </div>
-
-          <Pagination total={record?.pages} page={page} className="flex justify-center mt-5" />
         </div>
+        
+        {/* 当数据量为0时，不显示分页组件 */}
+        {record.total !== 0 && (
+          <div className="pb-10">
+            <Pagination total={record?.pages} page={page} className="flex justify-center mt-5" />
+          </div>
+        )}
       </div>
     </>
   )

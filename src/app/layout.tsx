@@ -68,7 +68,7 @@ export default async function RootLayout({ children }: Readonly<{ children: Reac
         <Header />
 
         {/* 主体内容 */}
-        <NextUIProvider>
+        <NextUIProvider className='flex flex-col flex-grow'>
           {children}
         </NextUIProvider>
 
