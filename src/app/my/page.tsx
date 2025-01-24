@@ -73,11 +73,11 @@ export default () => {
     goals: [
       {
         status: 1,
-        value: "1、涨薪2k！！！"
+        value: "1、考研上岸"
       },
       {
         status: 1,
-        value: "2、提高前端技术栈深度"
+        value: "2、努力学习 数学 + 408"
       },
       {
         status: 1,
@@ -85,19 +85,11 @@ export default () => {
       },
       {
         status: 1,
-        value: "4、ThriveX 博客管理系统 ⭐️ 破千"
-      },
-      {
-        status: 1,
-        value: "5、ThriveX 最低要求保持周更"
-      },
-      {
-        status: 1,
-        value: "6、输出 30 篇高质量技术博客"
+        value: "4、写 10 篇高质量文章"
       }
     ],
     project: [
-      {
+      /* {
         name: "ThriveX",
         images: [
           "https://bu.dusays.com/2024/09/17/66e9704b2b809.png",
@@ -161,7 +153,7 @@ export default () => {
           technology: "Nodejs、Eggjs、Socket.io、MySQL",
           url: ""
         },
-      },
+      }, */
     ]
   }
 

@@ -67,10 +67,10 @@ export default async ({ searchParams }: Props) => {
             <Show is={!record?.result?.length} children={<Empty info='闪念列表为空~' />} />
           </div>
         </div>
-        
+
         {/* 当数据量为0时，不显示分页组件 */}
         {record.total !== 0 && (
-          <div className="pb-10">
+          <div className="pb-[95px]">
             <Pagination total={record?.pages} page={page} className="flex justify-center mt-5" />
           </div>
         )}

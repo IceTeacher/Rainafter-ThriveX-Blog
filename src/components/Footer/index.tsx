@@ -13,8 +13,8 @@ export default async () => {
   const { data: web } = await getConfigDataAPI<Web>("web") || { data: {} as Web }
 
   return (
-    <>
-      <div className='relative top-[25px] flex justify-center lg:w-[950px] xl:w-[1200px] mx-auto'>
+    <div className='relative mt-auto'>
+      <div className='absolute flex justify-center lg:w-[950px] xl:w-[1200px] mx-auto left-[50%] top-[-55px]' style={{transform: 'translateX(-50%)'}}>
         <Image src={animals} alt="动物" width={660.34} height={79.99} className='hidden md:block' />
       </div>
 
@@ -33,7 +33,7 @@ export default async () => {
           <div className='flex flex-col md:flex-row md:justify-between items-center space-y-3 md:space-y-0'>
             <Tooltip showArrow={true} content="一款免费、开源、年轻、高颜值的现代化博客管理系统">
               <div className='flex items-center space-x-3'>
-                <img src="https://bu.dusays.com/2024/11/17/6739adf188f64.png" width={18} height={18} alt='系统LOGO' />
+                <Image src="https://bu.dusays.com/2024/11/17/6739adf188f64.png" width={18} height={18} alt='系统LOGO' />
                 <Link href="https://github.com/LiuYuYang01/ThriveX-Blog" target='_blank' className='hover:text-primary transition-colors'>基于开源项目 ThriveX 构建</Link>
               </div>
             </Tooltip>
@@ -43,6 +43,6 @@ export default async () => {
           </div>
         </div>
       </div>
-    </>
+    </div>
   )
 }
